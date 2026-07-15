@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Creative Yogi Playgroup - Kids & Moms Summer Camp</title>
+    <!-- Tailwind CSS for rich utilities -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playful & Clean -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for playful icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandYellow: '#FFD034',
+                        brandOrange: '#FF9F1C',
+                        brandGreen: '#2D6A4F',
+                        brandGreenLight: '#40916C',
+                        brandBlue: '#4EA8DE',
+                        brandCream: '#FFFDF9',
+                        brandBrown: '#5C3D2E'
+                    },
+                    fontFamily: {
+                        fredoka: ['"Fredoka"', 'sans-serif'],
+                        quicksand: ['"Quicksand"', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #FFFDF9;
+        }
+        h1, h2, h3, .font-playful {
+            font-family: 'Fredoka', sans-serif;
+        }
+        .cloud-divider {
+            position: relative;
+            background: #FFFDF9;
+        }
+        /* Custom smooth pulse for breathing exercise */
+        @keyframes breathe {
+            0%, 100% { transform: scale(1); background-color: #4EA8DE; }
+            50% { transform: scale(1.6); background-color: #FF9F1C; }
+        }
+        .breathing-bubble {
+            animation: breathe 8s infinite ease-in-out;
+            animation-play-state: paused;
+        }
+        .breathing-bubble.active {
+            animation-play-state: running;
+        }
+        /* Comic outline style reminiscent of poster image_240a64.jpg */
+        .comic-border {
+            border: 3px solid #1E1E1E;
+            box-shadow: 4px 4px 0px #1E1E1E;
+        }
+        .comic-border-sm {
+            border: 2px solid #1E1E1E;
+            box-shadow: 3px 3px 0px #1E1E1E;
+        }
+        .comic-shadow {
+            box-shadow: 6px 6px 0px #1E1E1E;
+        }
+    </style>
+</head>
+<body class="text-[#333] selection:bg-brandYellow overflow-x-hidden">
+
+    <!-- -->
+    <div class="bg-brandGreen text-white text-xs md:text-sm py-2 px-4 flex justify-between items-center z-50 relative border-b-2 border-black">
+        <div class="flex items-center gap-2">
+            <span class="inline-block w-2.5 h-2.5 rounded-full bg-brandYellow animate-ping"></span>
+            <span>✨ Unplug, Connect & Play: Aug 3 - Aug 26</span>
+        </div>
+        <div class="flex items-center gap-4">
+            <!-- Redirects directly to WhatsApp chat -->
+            <a href="https://wa.me/971529353900?text=Hi!%20I%20saw%20your%20Summer%20Camp%20Poster%20and%20would%20like%20to%20get%20more%20details%20about%20The%20Creative%20Yogi%20Playgroup." target="_blank" class="hover:underline flex items-center gap-1 font-bold">
+                <i class="fa-brands fa-whatsapp text-lg text-green-400"></i> +971 52 935 3900 (Chat on WhatsApp)
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN HERO SECTION -->
+    <header class="relative bg-gradient-to-b from-[#FFF2B2] via-[#FFF9D6] to-brandCream pt-8 pb-16 px-4 border-b-4 border-[#1E1E1E] overflow-hidden">
+        <!-- Playful Background elements modeled after poster image_240a64.jpg -->
+        <div class="absolute top-10 left-4 md:left-12 opacity-20 md:opacity-100 animate-bounce" style="animation-duration: 6s;">
+            <svg class="w-16 h-16 text-brandYellow fill-current" viewBox="0 0 24 24">
+                <path d="M12 4.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm0 16.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm8-8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm-16 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm12.364-6.364a1.5 1.5 0 1 1-2.121-2.122 1.5 1.5 0 0 1 2.121 2.122zm-8.485 8.485a1.5 1.5 0 1 1-2.121-2.121 1.5 1.5 0 0 1 2.121 2.121zm8.485 0a1.5 1.5 0 1 1-2.121 2.121 1.5 1.5 0 0 1 2.121-2.121zm-8.485-8.485a1.5 1.5 0 1 1-2.121-2.122 1.5 1.5 0 0 1 2.121 2.122zM12 6a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/>
+            </svg>
+        </div>
+        <div class="absolute right-6 top-16 md:right-24 bg-brandYellow border-2 border-black rounded-full p-2 rotate-12 hidden md:block">
+            <p class="text-xs font-bold text-center uppercase tracking-wider px-2">90 Mins Sanctuary</p>
+        </div>
+
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <!-- Badges -->
+            <div class="inline-flex items-center gap-2 bg-brandGreen text-white px-4 py-1.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider mb-6 comic-border-sm">
+                <i class="fa-solid fa-seedling text-brandYellow"></i> Kids & Moms Yoga Camp
+            </div>
+
+            <!-- Big Main Title Styled Like the Poster Title -->
+            <h1 class="text-4xl md:text-7xl font-bold tracking-tight text-slate-900 leading-tight mb-4 drop-shadow-sm">
+                The <span class="bg-brandYellow text-slate-900 px-3 py-1 rounded-2xl border-4 border-slate-900 inline-block rotate-[-2deg] my-2 comic-shadow">Creative Yogi</span> <br>
+                <span class="text-brandGreenLight underline decoration-brandYellow decoration-wavy">Playgroup</span>
+            </h1>
+
+            <p class="text-lg md:text-2xl font-bold text-slate-700 max-w-3xl mx-auto mt-4 px-2 leading-relaxed">
+                A 90-Minute Sanctuary of Movement, Mindfulness, and Creative Bonding
+            </p>
+
+            <p class="text-sm md:text-lg text-slate-600 max-w-2xl mx-auto mt-3">
+                Crafted to bring mothers and children (ages 5+) closer together to disconnect from screens, share laughter, and build habits that last a lifetime.
+            </p>
+
+            <!-- Poster Mockup Tag -->
+            <p class="text-xs text-brandGreen font-semibold mt-4">
+                <i class="fa-solid fa-qrcode mr-1"></i> Scanned directly from our Summer Camp Poster
+            </p>
+
+            <!-- Quick Action Buttons -->
+            <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center items-center px-4">
+                <a href="#booking" class="w-full sm:w-auto bg-brandOrange hover:bg-brandOrange/90 text-white font-bold text-lg px-8 py-4 rounded-2xl comic-border transition-all transform hover:-translate-y-1 text-center">
+                    <i class="fa-solid fa-ticket mr-2"></i> Reserve Your Spot
+                </a>
+                <a href="#pillars" class="w-full sm:w-auto bg-white hover:bg-slate-50 text-slate-900 font-semibold text-lg px-8 py-4 rounded-2xl border-3 border-black transition-all text-center">
+                    Explore Pillars
+                </a>
+            </div>
+        </div>
+
+        <!-- Wave / Clouds bottom transition -->
+        <div class="absolute bottom-0 left-0 right-0 h-8 bg-brandCream" style="clip-path: ellipse(60% 100% at 50% 100%);"></div>
+    </header>
+
+    <!-- QUICK POSTER DETAILS MATCHING IMAGE -->
+    <section class="bg-brandCream px-4 py-8 relative">
+        <div class="max-w-5xl mx-auto bg-[#FFE985] rounded-3xl p-6 md:p-8 comic-border relative">
+            <div class="absolute -top-6 -right-4 bg-brandGreen text-white px-4 py-2 rounded-xl text-xs font-bold uppercase rotate-6 border-2 border-black shadow">
+                Limited Spots!
+            </div>
+            
+            <h3 class="text-2xl font-bold text-brandBrown mb-6 text-center flex items-center justify-center gap-2">
+                <i class="fa-solid fa-calendar-check text-brandOrange"></i> Camp Schedule & Venue Details
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-slate-800">
+                <div class="bg-white/80 p-4 rounded-2xl border border-yellow-400">
+                    <p class="text-xs uppercase text-brandGreen font-bold mb-1">📅 Days</p>
+                    <p class="font-bold text-lg text-slate-950">Every Monday & Wednesday</p>
+                </div>
+                <div class="bg-white/80 p-4 rounded-2xl border border-yellow-400">
+                    <p class="text-xs uppercase text-brandGreen font-bold mb-1">🕒 Time</p>
+                    <p class="font-bold text-lg text-slate-950">10:00 AM – 11:30 AM</p>
+                    <span class="text-xs text-slate-500">(90 Minutes of pure fun)</span>
+                </div>
+                <div class="bg-white/80 p-4 rounded-2xl border border-yellow-400">
+                    <p class="text-xs uppercase text-brandGreen font-bold mb-1">👧 Age Group</p>
+                    <p class="font-bold text-lg text-slate-950">Moms & Kids</p>
+                    <span class="text-xs text-slate-500">(Ages 5 and above)</span>
+                </div>
+                <div class="bg-white/80 p-4 rounded-2xl border border-yellow-400">
+                    <p class="text-xs uppercase text-brandGreen font-bold mb-1">📍 Venue</p>
+                    <p class="font-bold text-md text-slate-950 leading-snug">Paragon Bay Mall</p>
+                    <span class="text-xs text-slate-600 block">Marina Square (Al Reem Island)</span>
+                </div>
+            </div>
+
+            <!-- Dates badges -->
+            <div class="mt-6 pt-6 border-t border-yellow-300">
+                <p class="text-center font-bold text-brandBrown mb-3 text-sm uppercase tracking-wider">
+                    8 Sessions Dates (August 2026)
+                </p>
+                <div class="flex flex-wrap justify-center gap-2 font-fredoka">
+                    <span class="bg-brandGreen text-white px-3 py-1 rounded-full text-xs font-bold">Aug 3 (Mon)</span>
+                    <span class="bg-brandGreen text-white px-3 py-1 rounded-full text-xs font-bold">Aug 5 (Wed)</span>
+                    <span class="bg-brandGreen text-white px-3 py-1 rounded-full text-xs font-bold">Aug 10 (Mon)</span>
+                    <span class="bg-brandGreen text-white px-3 py-1 rounded-full text-xs font-bold">Aug 12 (Wed)</span>
+                    <span class="bg-brandGreen text-white px-3 py-1 rounded-full text-xs font-bold">Aug 17 (Mon)</span>
+                    <span class="bg-brandGreen text-white px-3 py-1 rounded-full text-xs font-bold">Aug 19 (Wed)</span>
+                    <span class="bg-brandGreen text-white px-3 py-1 rounded-full text-xs font-bold">Aug 24 (Mon)</span>
+                    <span class="bg-brandGreen text-white px-3 py-1 rounded-full text-xs font-bold">Aug 26 (Wed)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRO & THE STORY -->
+    <section class="max-w-4xl mx-auto px-4 py-12 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
+            A Beautifully Structured Journey for Moms & Children
+        </h2>
+        <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            Every 90-minute session balances high-energy play with quiet, restorative focus. To keep our young yogis fully engaged and excited, <strong>no two sessions are ever the same</strong>. Each class introduces fresh themes, imaginative adventures, and cooperative games that make self-regulation and physical fitness feel like pure play.
+        </p>
+        <div class="inline-flex justify-center items-center gap-4 text-brandOrange font-bold text-lg font-fredoka">
+            <span>Yoga</span> • <span>Art</span> • <span>Mindfulness</span> • <span>Bonding</span>
+        </div>
+    </section>
+
+    <!-- THE 4 CORE PILLARS SECTION -->
+    <section id="pillars" class="bg-slate-50 border-y-4 border-slate-900 py-16 px-4">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-brandGreenLight font-bold uppercase tracking-widest text-sm">Our Foundations</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mt-2">The Core Pillars of Our Playgroup</h2>
+                <p class="text-slate-600 max-w-xl mx-auto mt-2">The unique blend of four sensory channels crafted to help kids flourish.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Pillar 1 -->
+                <div class="bg-white p-6 md:p-8 rounded-3xl comic-border transform transition-all hover:scale-[1.01]">
+                    <div class="w-14 h-14 bg-amber-100 rounded-2xl flex items-center justify-center text-brandOrange text-2xl mb-6 border-2 border-black shadow">
+                        <i class="fa-solid fa-child-reaching"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-950 mb-3">1. Playful Kids Yoga & Storytelling</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                        We translate traditional yoga postures into interactive stories. Your child will stretch, build balance, and improve coordination while pretending to navigate magic islands, climb mountains, or emulate forest animals.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-amber-50 text-brandOrange px-3 py-1 rounded-full text-xs font-semibold">Coordination</span>
+                        <span class="bg-amber-50 text-brandOrange px-3 py-1 rounded-full text-xs font-semibold">Storytelling</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-white p-6 md:p-8 rounded-3xl comic-border transform transition-all hover:scale-[1.01]">
+                    <div class="w-14 h-14 bg-green-100 rounded-2xl flex items-center justify-center text-brandGreen text-2xl mb-6 border-2 border-black shadow">
+                        <i class="fa-solid fa-puzzle-piece"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-950 mb-3">2. Cooperative Mind Games</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                        Through playful focus exercises like <span class="font-bold text-brandGreen">"The Statue of Mindfulness"</span> and tactile guessing games, children develop impulse control, sensory awareness, and deep listening skills in a supportive group environment.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-green-50 text-brandGreen px-3 py-1 rounded-full text-xs font-semibold">Impulse Control</span>
+                        <span class="bg-green-50 text-brandGreen px-3 py-1 rounded-full text-xs font-semibold">Listening Skills</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-white p-6 md:p-8 rounded-3xl comic-border transform transition-all hover:scale-[1.01]">
+                    <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-brandBlue text-2xl mb-6 border-2 border-black shadow">
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-950 mb-3">3. Artistic Self-Expression</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                        Our dedicated drawing segments (such as creating <span class="font-bold text-brandBlue">"My Secret Island"</span> or painting collaborative hand-print mandalas) allow children to process thoughts visually, giving mothers a beautiful window into their child's inner imagination.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-blue-50 text-brandBlue px-3 py-1 rounded-full text-xs font-semibold">Creative Art</span>
+                        <span class="bg-blue-50 text-brandBlue px-3 py-1 rounded-full text-xs font-semibold">Bonding Window</span>
+                    </div>
+                </div>
+
+                <!-- Pillar 4 -->
+                <div class="bg-white p-6 md:p-8 rounded-3xl comic-border transform transition-all hover:scale-[1.01]">
+                    <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center text-purple-600 text-2xl mb-6 border-2 border-black shadow">
+                        <i class="fa-solid fa-wind"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-950 mb-3">4. Playful Breathwork & Relaxation</h3>
+                    <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                        We teach children how to self-soothe using engaging breathing techniques like the <span class="font-bold text-purple-600">Bumblebee Breath</span> and <span class="font-bold text-purple-600">Belly Balloons</span>, concluding each session with a cozy, guided relaxation segment.
+                    </p>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="bg-purple-50 text-purple-600 px-3 py-1 rounded-full text-xs font-semibold">Stress Release</span>
+                        <span class="bg-purple-50 text-purple-600 px-3 py-1 rounded-full text-xs font-semibold">Guided Recharging</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- -->
+    <section class="py-16 px-4 bg-brandYellow/10">
+        <div class="max-w-xl mx-auto text-center bg-white p-8 rounded-3xl comic-border">
+            <span class="bg-brandBlue text-white text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">Try it together!</span>
+            <h3 class="text-3xl font-bold text-slate-900 mt-2 mb-1">"Belly Balloon" Breathing Buddy</h3>
+            <p class="text-slate-600 text-sm mb-6">A preview of how we make emotional regulation fun. Breathe along with the expanding balloon!</p>
+
+            <!-- Interactive Breathing Bubble -->
+            <div class="flex items-center justify-center h-48 mb-6">
+                <div id="breathBubble" class="breathing-bubble w-20 h-20 rounded-full flex items-center justify-center text-white font-bold comic-border text-xs transition-all duration-1000 ease-in-out">
+                    <span id="breathText">Paused</span>
+                </div>
+            </div>
+
+            <!-- Start/Stop controls -->
+            <div class="flex justify-center gap-4">
+                <button onclick="startBreathing()" id="btnStartBreath" class="bg-brandGreen text-white font-bold px-6 py-2.5 rounded-xl comic-border-sm hover:bg-brandGreenLight transition-all">
+                    Start Breathing Loop
+                </button>
+                <button onclick="stopBreathing()" id="btnStopBreath" class="bg-slate-300 text-slate-800 font-bold px-6 py-2.5 rounded-xl border border-black hidden hover:bg-slate-400 transition-all">
+                    Reset
+                </button>
+            </div>
+            
+            <p class="text-xs text-slate-500 mt-4 leading-relaxed">
+                💨 <strong>How to play:</strong> Click start! When the balloon grows, breathe in through your nose to inflate your belly balloon. When it shrinks, blow the air out like wind!
+            </p>
+        </div>
+    </section>
+
+    <!-- INVESTMENT & PACKAGES SECTION -->
+    <section id="pricing" class="py-16 px-4 bg-brandCream">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="text-brandOrange font-bold uppercase tracking-widest text-sm font-fredoka">Flexible Packages</span>
+                <h2 class="text-3xl md:text-5xl font-bold text-slate-900 mt-2">Investment & Packages</h2>
+                <p class="text-slate-600 max-w-xl mx-auto mt-2">Whether you drop in for a single session or join the full journey, we have a mat waiting for you!</p>
+            </div>
+
+            <!-- PRICING CARDS -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-12">
+                
+                <!-- Package 1: Single Drop-In -->
+                <div class="bg-white rounded-3xl comic-border p-8 flex flex-col justify-between relative">
+                    <div>
+                        <div class="absolute -top-4 left-6 bg-brandBlue text-white text-xs px-3 py-1 rounded-full font-bold uppercase tracking-widest border border-black">
+                            Flexible Try-Out
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-950 mt-2 mb-1">Single Session Drop-In</h3>
+                        <p class="text-slate-500 text-sm mb-6">Perfect to check out the vibe and experience a beautiful session of connection.</p>
+                        
+                        <div class="space-y-4 border-t border-slate-100 pt-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-700 font-medium">Mother + 1 Child:</span>
+                                <span class="text-2xl font-black text-slate-950">99 AED <span class="text-xs font-normal text-slate-500">/ session</span></span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-700 font-medium">Mother + 2 Children:</span>
+                                <span class="text-2xl font-black text-slate-950">169 AED <span class="text-xs font-normal text-slate-500">/ session</span></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="#booking" onclick="selectPackageType('single')" class="block text-center bg-slate-900 hover:bg-slate-800 text-white font-bold py-3 rounded-xl transition-all">
+                            Book Drop-In Mat
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Package 2: Full Camp Package -->
+                <div class="bg-[#FFF2B2] rounded-3xl comic-border p-8 flex flex-col justify-between relative transform scale-100 md:scale-105">
+                    <div class="absolute -top-5 right-6 bg-brandOrange text-white text-xs px-4 py-1.5 rounded-full font-bold uppercase tracking-widest border border-black animate-pulse">
+                        Best Value!
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-slate-950 mt-2 mb-1">Full Camp Package (8 Sessions)</h3>
+                        <p class="text-slate-600 text-sm mb-6">Commit to the full developmental journey of routine, social circles, and deep-seated calm.</p>
+                        
+                        <div class="space-y-4 border-t border-yellow-300 pt-4">
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-800 font-bold">Mother + 1 Child:</span>
+                                <div class="text-right">
+                                    <span class="text-2xl font-black text-slate-950">759 AED</span>
+                                    <span class="block text-xs text-brandGreen font-bold">(Save over 15%)</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-slate-800 font-bold">Mother + 2 Children:</span>
+                                <div class="text-right">
+                                    <span class="text-2xl font-black text-slate-950">1,259 AED</span>
+                                    <span class="block text-xs text-brandGreen font-bold">(Save over 20%)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="#booking" onclick="selectPackageType('full')" class="block text-center bg-brandOrange hover:bg-brandOrange/90 text-white font-bold py-3 rounded-xl comic-border-sm transition-all">
+                            Claim Camp Spot!
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DYNAMIC CALCULATOR COMPONENT -->
+            <div class="max-w-2xl mx-auto bg-brandGreen text-white p-6 md:p-8 rounded-3xl comic-border">
+                <h4 class="text-xl font-bold text-brandYellow mb-2 text-center">
+                    🧮 Live Price & Savings Calculator
+                </h4>
+                <p class="text-xs md:text-sm text-center text-slate-200 mb-6">Choose your options below to see how much you save on the camp!</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase mb-2 text-yellow-100">Number of Children</label>
+                        <select id="calcChildren" onchange="calculatePrice()" class="w-full p-3 bg-white text-slate-950 font-bold rounded-xl border-2 border-black focus:outline-none">
+                            <option value="1">Mother + 1 Child</option>
+                            <option value="2">Mother + 2 Children</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase mb-2 text-yellow-100">Package Commitment</label>
+                        <select id="calcPackage" onchange="calculatePrice()" class="w-full p-3 bg-white text-slate-950 font-bold rounded-xl border-2 border-black focus:outline-none">
+                            <option value="full">Full Camp Package (8 Sessions)</option>
+                            <option value="single">Single Session Drop-In</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="bg-white/10 rounded-2xl p-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+                    <div>
+                        <p class="text-xs text-slate-300">Your total investment:</p>
+                        <p id="calcTotalDisplay" class="text-3xl font-black text-brandYellow font-fredoka">759 AED</p>
+                    </div>
+                    <div id="calcSavingsBox" class="bg-white text-slate-950 px-4 py-2 rounded-xl text-xs font-bold comic-border-sm">
+                        🎉 Saving over 15% (vs. individual drop-ins)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WHY JOIN THE FULL CAMP? -->
+    <section class="bg-slate-900 text-white py-16 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-brandYellow mb-6 font-fredoka">Why Join the Full Camp?</h2>
+            <p class="text-slate-300 text-base md:text-lg leading-relaxed mb-8">
+                Consistency is key to developing mindfulness and physical strength. By joining the full camp, your child will build a comforting routine, deepen their social connections with other young yogis, and fully integrate these calming breathing and movement habits into their daily life alongside you.
+            </p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                    <h4 class="text-brandYellow font-bold mb-2">🧘 Calming Routine</h4>
+                    <p class="text-xs text-slate-300">Repeated sensory-mindful movements help kids map pathways to emotional regulation and stability.</p>
+                </div>
+                <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                    <h4 class="text-brandYellow font-bold mb-2">🤝 Deep Friendships</h4>
+                    <p class="text-xs text-slate-300">Working through interactive cooperative group adventures helps kids find cozy connections with peers.</p>
+                </div>
+                <div class="p-4 bg-white/5 rounded-2xl border border-white/10">
+                    <h4 class="text-brandYellow font-bold mb-2">📈 Lifelong Habits</h4>
+                    <p class="text-xs text-slate-300">Learning self-regulation now stays with children as they encounter fast-paced modern schedules.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MAIN INTERACTIVE BOOKING / RESERVATION FORM -->
+    <section id="booking" class="py-16 px-4 bg-brandYellow/10">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-3xl comic-border overflow-hidden">
+                <div class="bg-brandOrange text-white p-6 md:p-8 text-center border-b-2 border-black">
+                    <h2 class="text-3xl md:text-4xl font-bold">Secure Your Mats!</h2>
+                    <p class="text-sm text-amber-100 mt-1">This form automatically emails your reservation directly to info@lodyanaspa.ae!</p>
+                </div>
+
+                <!-- Booking form & preview container -->
+                <div class="grid grid-cols-1 lg:grid-cols-12">
+                    
+                    <!-- Left: Form -->
+                    <form id="resForm" onsubmit="handleReserve(event)" class="p-6 md:p-8 lg:col-span-7 space-y-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Mom's Full Name</label>
+                            <input type="text" id="momName" required placeholder="e.g. Sarah Smith" class="w-full p-3 border-2 border-slate-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-brandOrange">
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Child's Name</label>
+                                <input type="text" id="childName" required placeholder="e.g. Lily" class="w-full p-3 border-2 border-slate-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-brandOrange">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Child's Age</label>
+                                <select id="childAge" required class="w-full p-3 border-2 border-slate-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-brandOrange">
+                                    <option value="5">5 Years</option>
+                                    <option value="6">6 Years</option>
+                                    <option value="7">7 Years</option>
+                                    <option value="8">8 Years</option>
+                                    <option value="9">9 Years</option>
+                                    <option value="10">10 Years</option>
+                                    <option value="11">11+ Years</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Contact Phone (WhatsApp preferred)</label>
+                            <input type="tel" id="momPhone" required placeholder="e.g. +971 52 935 3900" class="w-full p-3 border-2 border-slate-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-brandOrange">
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-slate-700 mb-1">Select Package</label>
+                            <select id="formPackage" onchange="syncCalculatorFromForm()" class="w-full p-3 border-2 border-slate-900 rounded-xl focus:outline-none focus:ring-2 focus:ring-brandOrange font-semibold">
+                                <option value="full-1">Full Camp (8 Sessions) - Mom & 1 Child: 759 AED</option>
+                                <option value="full-2">Full Camp (8 Sessions) - Mom & 2 Children: 1259 AED</option>
+                                <option value="single-1">Drop-In (1 Session) - Mom & 1 Child: 99 AED</option>
+                                <option value="single-2">Drop-In (1 Session) - Mom & 2 Children: 169 AED</option>
+                            </select>
+                        </div>
+
+                        <div class="flex items-start gap-2 pt-2">
+                            <input type="checkbox" id="consent" required class="mt-1 border-2 border-slate-900">
+                            <label for="consent" class="text-xs text-slate-600">
+                                I confirm my child is 5 years or older and I understand spaces are limited & snug.
+                            </label>
+                        </div>
+
+                        <button type="submit" class="w-full bg-brandGreen hover:bg-brandGreenLight text-white font-bold py-4 rounded-xl comic-border-sm transition-all text-center">
+                            🚀 Secure Our Playgroup Mats & Email Lodyana Spa!
+                        </button>
+                    </form>
+
+                    <!-- Right: Info Panel / Visual Summary -->
+                    <div class="bg-slate-50 p-6 md:p-8 lg:col-span-5 flex flex-col justify-between border-t-2 lg:border-t-0 lg:border-l-2 border-slate-900">
+                        <div class="space-y-4">
+                            <h4 class="font-bold text-slate-950 text-lg">Booking Information</h4>
+                            <p class="text-xs text-slate-600 leading-relaxed">
+                                Once submitted, the system will open an email containing your booking data ready to send. Our team will then reach out on WhatsApp within 2-4 hours to verify payment and secure your mats.
+                            </p>
+                            
+                            <div class="bg-yellow-50 p-4 rounded-2xl border border-yellow-200 space-y-2">
+                                <div class="flex items-center gap-2 text-brandOrange font-bold text-sm">
+                                    <i class="fa-solid fa-map-location-dot"></i> Venue Spotlight:
+                                </div>
+                                <p class="text-xs text-slate-700">
+                                    <strong>Paragon Bay Mall</strong>, Marina Square, Al Reem Island. There's ample free underground parking for up to 2 hours!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pt-6 border-t border-slate-200">
+                            <p class="text-xs text-slate-500">Need immediate help?</p>
+                            <a href="https://wa.me/971529353900?text=Hello!%20I%20have%20a%20question%20about%20The%20Creative%20Yogi%20Playgroup." target="_blank" class="flex items-center gap-2 text-brandGreen font-bold text-sm hover:underline mt-1">
+                                <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp Support: +971 52 935 3900
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUCCESS MODAL (CUSTOM APP DIALOG - NO ALERTS ALLOWED) -->
+    <div id="successModal" class="fixed inset-0 bg-black/60 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-3xl comic-border max-w-lg w-full overflow-hidden animate-bounce-short">
+            <div class="bg-brandGreen text-white p-6 text-center">
+                <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center text-3xl mx-auto mb-3">
+                    🎉
+                </div>
+                <h3 class="text-2xl font-bold">Reservation Prepared!</h3>
+                <p class="text-sm text-green-100">Check your email app to send details to Lodyana Spa!</p>
+            </div>
+
+            <!-- Ticket details layout -->
+            <div class="p-6 space-y-4 text-slate-800">
+                <p class="text-sm text-center">Below is your digital yogi entry ticket summary:</p>
+                
+                <!-- Ticket visual component -->
+                <div class="bg-[#FFFDF3] border-2 border-dashed border-slate-400 rounded-2xl p-4 relative overflow-hidden">
+                    <div class="absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-slate-900 rounded-full"></div>
+                    <div class="absolute -right-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-slate-900 rounded-full"></div>
+                    
+                    <div class="text-center pb-2 border-b border-dashed border-slate-300">
+                        <span class="text-[10px] font-bold text-brandGreen uppercase tracking-widest">The Creative Yogi Ticket</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 pt-3 text-xs">
+                        <div>
+                            <span class="text-slate-400 block text-[9px] uppercase">Mother</span>
+                            <span id="ticketMom" class="font-bold">Mom Name</span>
+                        </div>
+                        <div>
+                            <span class="text-slate-400 block text-[9px] uppercase">Child (Age)</span>
+                            <span id="ticketChild" class="font-bold">Child (5)</span>
+                        </div>
+                        <div>
+                            <span class="text-slate-400 block text-[9px] uppercase">Package</span>
+                            <span id="ticketPackage" class="font-bold">Camp Package</span>
+                        </div>
+                        <div>
+                            <span class="text-slate-400 block text-[9px] uppercase">Dates</span>
+                            <span class="font-bold text-brandGreen">Aug 3 - Aug 26</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-xs text-slate-500 text-center leading-relaxed italic">
+                    *We have sent the booking details payload to your default email client. Please hit "Send" in the opened mail app to finalize delivery to info@lodyanaspa.ae!
+                </p>
+
+                <div class="flex gap-3 pt-2">
+                    <button onclick="closeSuccessModal()" class="w-full bg-slate-900 text-white font-bold py-3 rounded-xl hover:bg-slate-800 transition-all text-center">
+                        Close Ticket
+                    </button>
+                    <button onclick="window.print()" class="w-full bg-brandYellow text-slate-950 font-bold py-3 rounded-xl border-2 border-black hover:bg-amber-400 transition-all text-center text-sm">
+                        <i class="fa-solid fa-print mr-1"></i> Print / Save
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQS / HELP SECTION -->
+    <section class="py-12 px-4 max-w-3xl mx-auto">
+        <h3 class="text-2xl md:text-3xl font-bold text-center mb-8">Frequently Asked Questions</h3>
+        <div class="space-y-4">
+            <div class="bg-white p-4 rounded-2xl border border-slate-200">
+                <p class="font-bold text-slate-950 mb-2">🤔 Do I need prior yoga experience?</p>
+                <p class="text-sm text-slate-600">No, absolutely not! Our poses are translated into fun stories and are extremely gentle, friendly, and adapted perfectly for moms of all health levels and young kids.</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200">
+                <p class="font-bold text-slate-950 mb-2">🎨 What kind of art materials are used?</p>
+                <p class="text-sm text-slate-600">We utilize water-soluble, non-toxic, child-safe paints, and markers. Our artistic activities prioritize bonding, sensory exploration, and imaginative play rather than mess.</p>
+            </div>
+            <div class="bg-white p-4 rounded-2xl border border-slate-200">
+                <p class="font-bold text-slate-950 mb-2">🚗 Is there parking at Paragon Bay Mall?</p>
+                <p class="text-sm text-slate-600">Yes! The mall features ample, free secure underground garage parking directly beneath the playgroup venue for up to 2 hours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brandBrown text-white border-t-4 border-slate-950 py-12 px-4">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="space-y-3">
+                <p class="text-2xl font-bold text-brandYellow">The Creative Yogi</p>
+                <p class="text-xs text-amber-100/70 leading-relaxed">
+                    Designed to inspire sensory calmness, routine resilience, and joyful creative moments between moms and children in modern fast-paced routines.
+                </p>
+            </div>
+            <div class="space-y-2 text-sm">
+                <p class="font-bold text-brandYellow uppercase tracking-wider text-xs">Contacts & Bookings</p>
+                <p class="text-slate-300">
+                    <i class="fa-brands fa-whatsapp text-brandYellow"></i> WhatsApp: 
+                    <a href="https://wa.me/971529353900?text=Hi!%20I%20am%20interested%20in%20reserving%20a%20spot%20at%20The%20Creative%20Yogi%20Playgroup." target="_blank" class="hover:underline text-white font-semibold">+971 52 935 3900</a>
+                </p>
+                <p class="text-slate-300">📍 Location: Paragon Bay Mall, Marina Square, Al Reem Island, Abu Dhabi</p>
+            </div>
+            <div class="space-y-2 text-sm">
+                <p class="font-bold text-brandYellow uppercase tracking-wider text-xs">Quick Links</p>
+                <div class="flex flex-wrap gap-2 text-xs">
+                    <a href="#pillars" class="bg-white/10 px-3 py-1.5 rounded hover:bg-white/20 transition-all">Pillars</a>
+                    <a href="#pricing" class="bg-white/10 px-3 py-1.5 rounded hover:bg-white/20 transition-all">Pricing</a>
+                    <a href="#booking" class="bg-white/10 px-3 py-1.5 rounded hover:bg-white/20 transition-all">Reserve</a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-6xl mx-auto mt-8 pt-6 border-t border-white/10 text-center text-xs text-amber-100/50">
+            © 2026 The Creative Yogi Playgroup. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        // Breathing Tool State Variables
+        let breathingInterval = null;
+        let isBreathing = false;
+        const breathBubble = document.getElementById('breathBubble');
+        const breathText = document.getElementById('breathText');
+        const btnStartBreath = document.getElementById('btnStartBreath');
+        const btnStopBreath = document.getElementById('btnStopBreath');
+
+        // Functions for Breathing guide
+        function startBreathing() {
+            isBreathing = true;
+            breathBubble.classList.add('active');
+            btnStartBreath.classList.add('hidden');
+            btnStopBreath.classList.remove('hidden');
+            
+            let cycle = 0; // 0 = breathe in, 1 = breathe out
+            breathText.innerText = "Breathe In";
+            
+            breathingInterval = setInterval(() => {
+                if(cycle === 0) {
+                    breathText.innerText = "Breathe Out";
+                    cycle = 1;
+                } else {
+                    breathText.innerText = "Breathe In";
+                    cycle = 0;
+                }
+            }, 4000); // syncs with 8s scale keyframes
+        }
+
+        function stopBreathing() {
+            isBreathing = false;
+            breathBubble.classList.remove('active');
+            btnStartBreath.classList.remove('hidden');
+            btnStopBreath.classList.add('hidden');
+            breathText.innerText = "Paused";
+            clearInterval(breathingInterval);
+        }
+
+        // Pricing Calculation Script
+        function calculatePrice() {
+            const kidsCount = document.getElementById('calcChildren').value;
+            const packageType = document.getElementById('calcPackage').value;
+            const display = document.getElementById('calcTotalDisplay');
+            const savingsBox = document.getElementById('calcSavingsBox');
+
+            if (packageType === 'full') {
+                if (kidsCount === '1') {
+                    display.innerText = "759 AED";
+                    savingsBox.innerText = "🎉 Save over 15% (vs. individual drop-ins)";
+                    savingsBox.className = "bg-white text-slate-950 px-4 py-2 rounded-xl text-xs font-bold comic-border-sm";
+                } else {
+                    display.innerText = "1,259 AED";
+                    savingsBox.innerText = "🎉 Save over 20% (vs. individual drop-ins)";
+                    savingsBox.className = "bg-brandYellow text-slate-950 px-4 py-2 rounded-xl text-xs font-bold comic-border-sm";
+                }
+            } else {
+                if (kidsCount === '1') {
+                    display.innerText = "99 AED";
+                    savingsBox.innerText = "Single session drop-in price";
+                    savingsBox.className = "bg-slate-100 text-slate-700 px-4 py-2 rounded-xl text-xs font-semibold";
+                } else {
+                    display.innerText = "169 AED";
+                    savingsBox.innerText = "Single session drop-in price";
+                    savingsBox.className = "bg-slate-100 text-slate-700 px-4 py-2 rounded-xl text-xs font-semibold";
+                }
+            }
+        }
+
+        // Sync Select Package Type from the pricing table cards to the reservation form selector
+        function selectPackageType(type) {
+            const selectElement = document.getElementById('formPackage');
+            if (type === 'full') {
+                selectElement.value = 'full-1';
+            } else {
+                selectElement.value = 'single-1';
+            }
+        }
+
+        // Sync main form values dynamically with calculator values back & forth
+        function syncCalculatorFromForm() {
+            const selectedVal = document.getElementById('formPackage').value;
+            const calcChildren = document.getElementById('calcChildren');
+            const calcPackage = document.getElementById('calcPackage');
+
+            if (selectedVal === 'full-1') {
+                calcChildren.value = '1';
+                calcPackage.value = 'full';
+            } else if (selectedVal === 'full-2') {
+                calcChildren.value = '2';
+                calcPackage.value = 'full';
+            } else if (selectedVal === 'single-1') {
+                calcChildren.value = '1';
+                calcPackage.value = 'single';
+            } else if (selectedVal === 'single-2') {
+                calcChildren.value = '2';
+                calcPackage.value = 'single';
+            }
+            calculatePrice();
+        }
+
+        function handleReserve(event) {
+            event.preventDefault();
+            
+            // Collect Form Values
+            const mom = document.getElementById('momName').value;
+            const child = document.getElementById('childName').value;
+            const age = document.getElementById('childAge').value;
+            const phone = document.getElementById('momPhone').value;
+            const pkgSelect = document.getElementById('formPackage');
+            const pkg = pkgSelect.options[pkgSelect.selectedIndex].text;
+
+            // Populate Success Ticket UI
+            document.getElementById('ticketMom').innerText = mom;
+            document.getElementById('ticketChild').innerText = child + " (Age " + age + ")";
+            document.getElementById('ticketPackage').innerText = pkg.split('-')[1] ? pkg.split('-')[1].trim() : pkg;
+
+            // Trigger success dialog ticket modal in UI
+            document.getElementById('successModal').classList.remove('hidden');
+
+            // Format Email to info@lodyanaspa.ae
+            const recipient = "info@lodyanaspa.ae";
+            const subject = `The Creative Yogi Camp Reservation - ${mom}`;
+            
+            // Create a neatly formatted body text
+            const body = 
+`Hello Lodyana Spa Team,
+
+I have completed my reservation for The Creative Yogi Playgroup on the summer camp portal!
+
+--- RESERVATION DETAILS ---
+Mom's Name: ${mom}
+Child's Name: ${child}
+Child's Age: ${age} Years Old
+Parent Phone / WhatsApp: ${phone}
+Selected Package: ${pkg}
+---------------------------
+
+Please confirm my slots and send me the payment registration parameters.
+
+Best wishes,
+${mom}`;
+
+            // Construct and trigger the mailto link
+            const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            // Open the parent's default mail agent to transmit details
+            setTimeout(() => {
+                window.location.href = mailtoUrl;
+            }, 800);
+        }
+
+        function closeSuccessModal() {
+            document.getElementById('successModal').classList.add('hidden');
+            document.getElementById('resForm').reset();
+        }
+    </script>
+</body>
+</html>
